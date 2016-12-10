@@ -1,18 +1,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  labels:
-    name: blue
-  name: blue
+  name: webserver-blue
 spec:
   replicas: 3
   template:
     metadata:
       labels:
-        name: blue
+        type: webserver
+        color: blue
     spec:
       containers:
-      - image: gcr.io/<PROJECT ID>/sampleapl:v1.0
-        name: blue
+      - image: gcr.io/<PROJECT ID>/sampleapl:blue
+        name: webserver-container
         ports:
         - containerPort: 80
+          name: http-server

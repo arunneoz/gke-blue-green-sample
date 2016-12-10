@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    name: web-service
-  name: web-service
+  name: webserver
 spec:
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-  selector:
-    name: blue
   type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    type: webserver
+    color: blue
