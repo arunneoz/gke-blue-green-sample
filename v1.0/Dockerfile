@@ -1,5 +1,5 @@
 # Step 1: Base Docker image(ベースイメージ取得)
-FROM docker pull nginx
+FROM nginx
 
 # Step 2: Maintainer profile(作成者情報)
 MAINTAINER asashiho@mail.asa.yokohama
