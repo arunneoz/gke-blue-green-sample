@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    name: green
+  name: green
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: green
+    spec:
+      containers:
+      - image: gcr.io/<PROJECT ID>/sampleapl:v2.0
+        name: green
+        ports:
+        - containerPort: 80
