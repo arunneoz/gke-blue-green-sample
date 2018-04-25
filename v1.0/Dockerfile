@@ -2,7 +2,7 @@
 FROM nginx
 
 # Step 2: Maintainer profile(作成者情報)
-MAINTAINER asashiho@mail.asa.yokohama
+MAINTAINER arunk777@gmail.com
 
 # Step 3: Forward request logs to Docker log collector(ログの転送)
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
