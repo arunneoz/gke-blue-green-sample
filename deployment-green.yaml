@@ -11,7 +11,7 @@ spec:
         color: green
     spec:
       containers:
-      - image: gcr.io/<PROJECT ID>/sampleapl:green
+      - image: us.gcr.io/inbound-rune-devops-gke/webserver:green
         name: webserver-container
         ports:
         - containerPort: 80
